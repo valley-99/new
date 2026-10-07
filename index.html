@@ -7,7 +7,7 @@
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
       n.queue = []; t = b.createElement(e); t.async = !0;
@@ -24,7 +24,7 @@
   </noscript>
   <!-- End Meta Pixel Code -->
   <meta charset="UTF-8">
-<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+  <!-- This site is hosted on Netlify. Anyone can build and deploy a site
      like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=fa9a1f71-a769-488c-b872-b219b908b844
      Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
   <title>Shivi ad</title>
@@ -49,7 +49,11 @@
       --line: rgba(52, 211, 153, 0.18);
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       min-height: 100vh;
@@ -64,27 +68,76 @@
       position: relative;
     }
 
-    .video-bg { position: fixed; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+    .video-bg {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
 
     .overlay {
-      position: fixed; inset: 0; z-index: -1;
+      position: fixed;
+      inset: 0;
+      z-index: -1;
       background: linear-gradient(160deg, rgba(3, 20, 15, 0.93), rgba(4, 19, 15, 0.86) 55%, rgba(18, 14, 4, 0.9));
     }
 
-    .rb-circles { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 0; }
-    .rb-circle { position: absolute; border-radius: 50%; border: 1px solid rgba(52, 211, 153, 0.09); }
-    .rb-c1 { width: 600px; height: 600px; top: -250px; right: -200px; }
-    .rb-c2 { width: 400px; height: 400px; bottom: -150px; left: -150px; border-color: rgba(245, 192, 74, 0.1); }
-    .rb-c3 { width: 220px; height: 220px; top: 35%; right: 8%; border-color: rgba(52, 211, 153, 0.07); }
+    .rb-circles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .rb-circle {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(52, 211, 153, 0.09);
+    }
+
+    .rb-c1 {
+      width: 600px;
+      height: 600px;
+      top: -250px;
+      right: -200px;
+    }
+
+    .rb-c2 {
+      width: 400px;
+      height: 400px;
+      bottom: -150px;
+      left: -150px;
+      border-color: rgba(245, 192, 74, 0.1);
+    }
+
+    .rb-c3 {
+      width: 220px;
+      height: 220px;
+      top: 35%;
+      right: 8%;
+      border-color: rgba(52, 211, 153, 0.07);
+    }
 
     .rb-glow {
-      position: fixed; top: -140px; left: 50%; transform: translateX(-50%);
-      width: 600px; height: 380px; pointer-events: none; z-index: 0;
+      position: fixed;
+      top: -140px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 380px;
+      pointer-events: none;
+      z-index: 0;
       background: radial-gradient(ellipse, rgba(16, 185, 129, 0.22) 0%, transparent 70%);
     }
 
     .rb-card {
-      width: 100%; max-width: 410px; position: relative; z-index: 2;
+      width: 100%;
+      max-width: 410px;
+      position: relative;
+      z-index: 2;
       border-radius: 28px;
       box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55), 0 0 0 1px var(--line);
       backdrop-filter: blur(14px);
@@ -93,8 +146,15 @@
     }
 
     @keyframes rb-up {
-      from { opacity: 0; transform: translateY(28px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .rb-top {
@@ -107,42 +167,92 @@
     }
 
     .rb-top::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
       background: linear-gradient(90deg, transparent, var(--emerald), var(--gold), transparent);
     }
 
     .rb-avatar-ring {
-      width: 104px; height: 104px; margin: 0 auto 20px; border-radius: 50%; padding: 3px; position: relative;
+      width: 104px;
+      height: 104px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      padding: 3px;
+      position: relative;
       background: conic-gradient(from 200deg, var(--gold), var(--emerald), var(--gold));
       box-shadow: 0 0 34px rgba(245, 192, 74, 0.28);
     }
 
     .rb-avatar-inner {
-      width: 100%; height: 100%; border-radius: 50%; background: var(--bg); overflow: hidden;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Playfair Display', serif; font-size: 30px; color: var(--gold);
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: var(--bg);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      color: var(--gold);
     }
-    .rb-avatar-inner img { width: 100%; height: 100%; object-fit: cover; }
+
+    .rb-avatar-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     .rb-verified {
-      position: absolute; bottom: 2px; right: 2px; width: 26px; height: 26px;
-      background: var(--emerald); border-radius: 50%; border: 2px solid var(--bg);
-      display: flex; align-items: center; justify-content: center; font-size: 12px; color: #fff;
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      width: 26px;
+      height: 26px;
+      background: var(--emerald);
+      border-radius: 50%;
+      border: 2px solid var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #fff;
     }
 
     .rb-name {
-      font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 800;
-      letter-spacing: 1.5px; line-height: 1.2; margin-bottom: 6px;
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      line-height: 1.2;
+      margin-bottom: 6px;
       background: linear-gradient(90deg, #fff3c9, var(--gold), #fff3c9);
-      -webkit-background-clip: text; background-clip: text; color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
-    .rb-name span { color: var(--gold); }
+
+    .rb-name span {
+      color: var(--gold);
+    }
 
     .rb-designation {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: rgba(245, 192, 74, 0.1); border: 1px solid rgba(245, 192, 74, 0.3);
-      border-radius: 20px; padding: 5px 14px; font-size: 11px; color: var(--gold);
-      font-weight: 500; letter-spacing: 0.5px; margin-top: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(245, 192, 74, 0.1);
+      border: 1px solid rgba(245, 192, 74, 0.3);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 11px;
+      color: var(--gold);
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
     }
 
     .rb-body {
@@ -152,90 +262,238 @@
       padding: 24px 28px 28px;
     }
 
-    .rb-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 22px; }
+    .rb-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 22px;
+    }
 
     .rb-stat {
-      background: rgba(16, 185, 129, 0.07); border: 1px solid var(--line);
-      border-radius: 14px; padding: 14px 8px; text-align: center;
+      background: rgba(16, 185, 129, 0.07);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 8px;
+      text-align: center;
     }
+
     .rb-stat-val {
-      font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700;
-      color: var(--gold); line-height: 1; margin-bottom: 5px;
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 5px;
     }
+
     .rb-stat-lbl {
-      font-size: 9px; color: var(--muted); font-weight: 600;
-      letter-spacing: 0.8px; text-transform: uppercase;
+      font-size: 9px;
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
     }
 
-    .rb-features { display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }
-    .rb-feat { display: flex; align-items: center; gap: 12px; }
+    .rb-features {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .rb-feat {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
     .rb-feat-dot {
-      width: 32px; height: 32px; border-radius: 10px;
-      background: rgba(245, 192, 74, 0.09); border: 1px solid rgba(245, 192, 74, 0.25);
-      display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      background: rgba(245, 192, 74, 0.09);
+      border: 1px solid rgba(245, 192, 74, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
     }
-    .rb-feat-text { font-size: 13px; color: #c3dcd1; font-weight: 500; }
 
-    .rb-trust { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 20px; }
+    .rb-feat-text {
+      font-size: 13px;
+      color: #c3dcd1;
+      font-weight: 500;
+    }
+
+    .rb-trust {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
     .rb-trust-pill {
-      background: rgba(52, 211, 153, 0.07); border: 1px solid var(--line);
-      border-radius: 20px; padding: 6px 14px; font-size: 11px; color: var(--emerald-soft); font-weight: 600;
+      background: rgba(52, 211, 153, 0.07);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 11px;
+      color: var(--emerald-soft);
+      font-weight: 600;
     }
 
     .rb-btn {
-      display: flex; align-items: center; justify-content: center; gap: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       background: linear-gradient(135deg, var(--gold-deep), var(--gold));
-      color: #2a1c00; text-decoration: none; padding: 16px; border-radius: 16px;
-      font-size: 14px; font-weight: 800; letter-spacing: 0.9px; margin-bottom: 20px;
-      position: relative; overflow: hidden;
+      color: #2a1c00;
+      text-decoration: none;
+      padding: 16px;
+      border-radius: 16px;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.9px;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
       box-shadow: 0 10px 26px rgba(245, 192, 74, 0.28);
       transition: transform 0.2s, box-shadow 0.2s;
     }
+
     .rb-btn::after {
-      content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
       background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
       animation: rb-shine 2.8s infinite;
     }
-    @keyframes rb-shine { 0% { left: -100%; } 100% { left: 200%; } }
-    .rb-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(245, 192, 74, 0.4); }
+
+    @keyframes rb-shine {
+      0% {
+        left: -100%;
+      }
+
+      100% {
+        left: 200%;
+      }
+    }
+
+    .rb-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 32px rgba(245, 192, 74, 0.4);
+    }
 
     .rb-disclaimer {
-      font-size: 9.5px; color: var(--faint); line-height: 1.5; text-align: center;
-      margin-bottom: 16px; padding: 0 4px; font-weight: 400;
+      font-size: 9.5px;
+      color: var(--faint);
+      line-height: 1.5;
+      text-align: center;
+      margin-bottom: 16px;
+      padding: 0 4px;
+      font-weight: 400;
     }
 
     .rb-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      padding-top: 16px; border-top: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
     }
-    .rb-footer-txt { font-size: 11px; color: var(--muted); font-weight: 400; }
+
+    .rb-footer-txt {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
     .rb-agency {
-      font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
-      color: var(--emerald-soft); text-decoration: none;
-      border: 1px solid rgba(52, 211, 153, 0.35); padding: 5px 12px; border-radius: 6px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--emerald-soft);
+      text-decoration: none;
+      border: 1px solid rgba(52, 211, 153, 0.35);
+      padding: 5px 12px;
+      border-radius: 6px;
       transition: background 0.2s;
     }
-    .rb-agency:hover { background: rgba(52, 211, 153, 0.12); }
+
+    .rb-agency:hover {
+      background: rgba(52, 211, 153, 0.12);
+    }
 
     .loader {
-      position: fixed; inset: 0; z-index: 100;
-      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
       background: radial-gradient(circle at 50% 40%, #0a2a20, #04130f 70%);
       transition: opacity 0.25s;
     }
-    .loader.hide { opacity: 0; pointer-events: none; }
+
+    .loader.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+
     .spinner {
-      width: 56px; height: 56px; border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
       border: 4px solid rgba(52, 211, 153, 0.18);
-      border-top-color: var(--gold); border-right-color: var(--emerald);
+      border-top-color: var(--gold);
+      border-right-color: var(--emerald);
       animation: spin 0.6s linear infinite;
       box-shadow: 0 0 30px rgba(245, 192, 74, 0.25);
     }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .loader-txt { font-size: 13px; letter-spacing: 1px; color: var(--muted); font-weight: 600; }
-    .loader-bar { width: 160px; height: 3px; border-radius: 3px; background: rgba(52, 211, 153, 0.15); overflow: hidden; }
-    .loader-bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--emerald), var(--gold)); animation: fill 0.5s linear forwards; }
-    @keyframes fill { to { width: 100%; } }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loader-txt {
+      font-size: 13px;
+      letter-spacing: 1px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .loader-bar {
+      width: 160px;
+      height: 3px;
+      border-radius: 3px;
+      background: rgba(52, 211, 153, 0.15);
+      overflow: hidden;
+    }
+
+    .loader-bar i {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--emerald), var(--gold));
+      animation: fill 0.5s linear forwards;
+    }
+
+    @keyframes fill {
+      to {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 
@@ -263,8 +521,9 @@
     <div class="rb-top">
       <div class="rb-avatar-ring">
         <div class="rb-avatar-inner">
-          <a href="https://cdn5.telesco.pe/file/s3asgYsBYsBGpOoTxoTYr-YqmGzJv_qpjBxYnJUA8QH-mFFNEyPt38QK2Jw-l-rUT1wJ-MnGuUTIpq54apvFn_Eqe31_8pCvun4LcYAD1iLiXWoX24Nbkdhg34hFOECqpTCgcZkFQ-fAyrbZba9T0GiCNlP8_zhoyvKE_oUHG4ZthIIkXMwDu9XugVRMWpeq_sY1ofZiz7FfKhJnK0YJYvh5QKDkVq_-eclZyPJSTtPWfsfP-j8uD3jx9z64EwMvbF2-ljuZqSmw3AuIxMR134WBYzJIrMaPaMZE4BGPLySSV-HMH7vIJIUEQu18DyD1SBvBg854d-NvUTl8UqORaQ.jpg" target="_blank">
-            <img src="https://cdn5.telesco.pe/file/s3asgYsBYsBGpOoTxoTYr-YqmGzJv_qpjBxYnJUA8QH-mFFNEyPt38QK2Jw-l-rUT1wJ-MnGuUTIpq54apvFn_Eqe31_8pCvun4LcYAD1iLiXWoX24Nbkdhg34hFOECqpTCgcZkFQ-fAyrbZba9T0GiCNlP8_zhoyvKE_oUHG4ZthIIkXMwDu9XugVRMWpeq_sY1ofZiz7FfKhJnK0YJYvh5QKDkVq_-eclZyPJSTtPWfsfP-j8uD3jx9z64EwMvbF2-ljuZqSmw3AuIxMR134WBYzJIrMaPaMZE4BGPLySSV-HMH7vIJIUEQu18DyD1SBvBg854d-NvUTl8UqORaQ.jpg" alt="Gautam Kumar Jha">
+          <a href="https://cdn5.telesco.pe/file/s3asgYsBYsBGpOoTxoTYr-YqmGzJv_qpjBxYnJUA8QH-mFFNEyPt38QK2Jw-l-rUT1wJ-MnGuUTIpq54apvFn_Eqe31_8pCvun4LcYAD1iLiXWoX24Nbkdhg34hFOECqpTCgcZkFQ-fAyrbZba9T0GiCNlP8_zhoyvKE_oUHG4ZthIIkXMwDu9XugVRMWpeq_sY1ofZiz7FfKhJnK0YJYvh5QKDkVq_-eclZyPJSTtPWfsfP-j8uD3jx9z64EwMvbF2-ljuZqSmw3AuIxMR134WBYzJIrMaPaMZE4BGPLySSV-HMH7vIJIUEQu18DyD1SBvBg854d-NvUTl8UqORaQ.jpg"
+            target="_blank">
+            <img src="images/gautam.jpg" alt="Gautam Kumar Jha">
           </a>
         </div>
         <div class="rb-verified">✓</div>
@@ -350,4 +609,6 @@
   </script>
 </body>
 
-</html><script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="fa9a1f71-a769-488c-b872-b219b908b844" data-app-host="app.netlify.com"></script>
+</html>
+<script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public"
+  data-netlify-site-id="fa9a1f71-a769-488c-b872-b219b908b844" data-app-host="app.netlify.com"></script>
